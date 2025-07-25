@@ -45,12 +45,15 @@ if (isset($_SESSION['auth']) && $_SESSION['auth'] == 1) {
             <i class="fas fa-film"></i> COSC 4806 Movie App
         </a>
         <div class="navbar-nav me-auto">
-            <a class="nav-link" href="/movies">
-                <i class="fas fa-film"></i> Movies
+            <a class="nav-link fw-bold text-warning" href="/movies">
+                🎬 Movies
             </a>
         </div>
         <div class="navbar-nav ms-auto">
-            <a class="nav-link" href="/login">
+            <a class="nav-link text-white" href="/register">
+                <i class="fas fa-user-plus"></i> Register
+            </a>
+            <a class="nav-link text-white" href="/login">
                 <i class="fas fa-sign-in-alt"></i> Login
             </a>
         </div>
