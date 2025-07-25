@@ -7,8 +7,8 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-4">
-                    <h5><i class="fas fa-sticky-note"></i> COSC 4806 Reminder App</h5>
-                    <p class="mb-0">Your personal task management solution</p>
+                    <h5><i class="fas fa-film"></i> Movies Hotstar</h5>
+                    <p class="mb-0">Your personal movie streaming solution</p>
                     <small class="text-muted">Built with PHP & Bootstrap</small>
                 </div>
                 <div class="col-md-4">
@@ -16,7 +16,7 @@
                     <ul class="list-unstyled">
                         <?php if (isset($_SESSION['auth']) && $_SESSION['auth'] == 1): ?>
                             <li><a href="/home" class="text-light text-decoration-none"><i class="fas fa-home"></i> Dashboard</a></li>
-                            <li><a href="/reminders" class="text-light text-decoration-none"><i class="fas fa-sticky-note"></i> My Reminders</a></li>
+                            <li><a href="/movies" class="text-light text-decoration-none"><i class="fas fa-film"></i> My Movies</a></li>
                             <li><a href="/logout" class="text-light text-decoration-none"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
                         <?php else: ?>
                             <li><a href="/login" class="text-light text-decoration-none"><i class="fas fa-sign-in-alt"></i> Login</a></li>
@@ -35,7 +35,7 @@
             <hr class="my-3">
             <div class="row align-items-center">
                 <div class="col-md-6">
-                    <small>&copy; 2024 COSC 4806 Reminder App. All rights reserved.</small>
+                    <small>&copy; 2024 Movies Hotstar. All rights reserved.</small>
                 </div>
                 <div class="col-md-6 text-end">
                     <small>Version 1.0 | Made with <i class="fas fa-heart text-danger"></i></small>
