@@ -11,14 +11,14 @@ if (isset($_SESSION['auth']) && $_SESSION['auth'] == 1) {
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="icon" href="/favicon.png">
-    <title>COSC 4806 - Movie Explorer</title>
+    <title>COSC 4806 - Movie App</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="mobile-web-app-capable" content="yes">
     <style>
         body {
-            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             min-height: 100vh;
         }
         .navbar-brand {
@@ -42,11 +42,11 @@ if (isset($_SESSION['auth']) && $_SESSION['auth'] == 1) {
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container">
         <a class="navbar-brand" href="/">
-            <i class="fas fa-film"></i> COSC 4806 Movie Explorer
+            <i class="fas fa-film"></i> COSC 4806 Movie App
         </a>
         <div class="navbar-nav me-auto">
             <a class="nav-link" href="/movies">
-                <i class="fas fa-search"></i> Browse
+                <i class="fas fa-film"></i> Movies
             </a>
         </div>
         <div class="navbar-nav ms-auto">
@@ -59,10 +59,9 @@ if (isset($_SESSION['auth']) && $_SESSION['auth'] == 1) {
 
 <div class="hero-section">
     <div class="container">
-        <h1 class="display-4"><i class="fas fa-film"></i> Discover Movies Instantly</h1>
-        <p class="lead">Search movies, leave ratings, and get AI-generated reviews</p>
+        <h1 class="display-4"><i class="fas fa-film"></i> Welcome to Movie App</h1>
+        <p class="lead">Discover and rate your favorite movies</p>
     </div>
 </div>
 
 <div class="container mt-4">
-<!-- Content continues -->

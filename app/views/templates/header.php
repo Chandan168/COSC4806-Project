@@ -9,7 +9,7 @@ if (!isset($_SESSION['auth'])) {
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
         <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
         <link rel="icon" href="/favicon.png">
-        <title>COSC 4806 - Reminder App</title>
+        <title>COSC 4806 - Movie App</title>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <meta name="viewport" content="width=device-width">
         <meta name="apple-mobile-web-app-capable" content="yes">
@@ -45,15 +45,12 @@ if (!isset($_SESSION['auth'])) {
                 <a class="nav-link" href="/home">
                     <i class="fas fa-home"></i> Home
                 </a>
-                <a class="nav-link" href="/reminders">
-                    <i class="fas fa-list"></i> Reminders
-                </a>
                 <a class="nav-link" href="/movies">
                     <i class="fas fa-film"></i> Movies
                 </a>
             </div>
             <div class="navbar-nav ms-auto">
-                <i class="fas fa-sticky-note"></i> COSC 4806 Reminder App
+                <i class="fas fa-film"></i> COSC 4806 Movie App
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -65,11 +62,7 @@ if (!isset($_SESSION['auth'])) {
                             <i class="fas fa-home"></i> Dashboard
                         </a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/reminders">
-                            <i class="fas fa-sticky-note"></i> My Reminders
-                        </a>
-                    </li>
+
                     <?php if (isset($_SESSION['is_admin']) && $_SESSION['is_admin'] === true): ?>
                     <li class="nav-item">
                         <a class="nav-link" href="/reports">
