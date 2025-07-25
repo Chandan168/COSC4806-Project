@@ -39,6 +39,20 @@ if (!isset($_SESSION['auth'])) {
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
         <div class="container-fluid">
             <a class="navbar-brand" href="/home">
+                <i class="fas fa-sticky-note"></i> COSC 4806 App
+            </a>
+            <div class="navbar-nav me-auto">
+                <a class="nav-link" href="/home">
+                    <i class="fas fa-home"></i> Home
+                </a>
+                <a class="nav-link" href="/reminders">
+                    <i class="fas fa-list"></i> Reminders
+                </a>
+                <a class="nav-link" href="/movies">
+                    <i class="fas fa-film"></i> Movies
+                </a>
+            </div>
+            <div class="navbar-nav ms-auto">
                 <i class="fas fa-sticky-note"></i> COSC 4806 Reminder App
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
