@@ -44,6 +44,11 @@ if (isset($_SESSION['auth']) && $_SESSION['auth'] == 1) {
         <a class="navbar-brand" href="/">
             <i class="fas fa-sticky-note"></i> COSC 4806 Reminder App
         </a>
+        <div class="navbar-nav me-auto">
+            <a class="nav-link" href="/movies">
+                <i class="fas fa-film"></i> Movies
+            </a>
+        </div>
         <div class="navbar-nav ms-auto">
             <a class="nav-link" href="/login">
                 <i class="fas fa-sign-in-alt"></i> Login
