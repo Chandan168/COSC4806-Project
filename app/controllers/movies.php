@@ -101,30 +101,39 @@ class Movies extends Controller {
         exit;
     }
 
-    public function generateReview($movieId = '') {
-        if (empty($movieId)) {
-            echo json_encode(['error' => 'Movie ID required']);
+    public function generateReview($imdbId = '') {
+        if (empty($imdbId)) {
+            echo json_encode(['error' => 'IMDB ID required']);
             exit;
         }
 
         $movieModel = $this->model('Movie');
 
+        // Get movie data from database using IMDB ID
+        $movie = $movieModel->getMovieByImdbId($imdbId);
+        if (!$movie) {
+            echo json_encode(['error' => 'Movie not found in database']);
+            exit;
+        }
+
         // Check if review already exists
-        $existingReview = $movieModel->getAIReview($movieId);
+        $existingReview = $movieModel->getAIReview($movie['id']);
         if ($existingReview) {
             echo json_encode(['review' => $existingReview]);
             exit;
         }
 
-        // Get movie data
-        $movie = $movieModel->getMovieByImdbId($movieId);
-        if (!$movie) {
-            echo json_encode(['error' => 'Movie not found']);
-            exit;
-        }
+        // Prepare movie data for AI review generation
+        $movieDataForAI = [
+            'title' => $movie['title'],
+            'year' => $movie['year'],
+            'genre' => $movie['genre'],
+            'director' => $movie['director'],
+            'plot' => $movie['plot']
+        ];
 
         // Generate AI review
-        $result = $movieModel->generateAIReview($movie);
+        $result = $movieModel->generateAIReview($movieDataForAI);
 
         if (isset($result['error'])) {
             echo json_encode($result);
