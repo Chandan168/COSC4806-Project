@@ -41,7 +41,6 @@ class App {
             $this->method = 'index';
         }
 
-        // Set parameters (skip controller and method parts)
         $this->params = array_slice($url, 2);
 
         // Call controller method with parameters
@@ -49,7 +48,7 @@ class App {
     }
 
     public function parseUrl() {
-        // First try the rewrite URL parameter
+        
         if (isset($_GET['url']) && !empty($_GET['url'])) {
             $url = rtrim($_GET['url'], '/');
             $url = filter_var($url, FILTER_SANITIZE_URL);
@@ -59,9 +58,9 @@ class App {
         
         if (isset($_SERVER['REQUEST_URI'])) {
             $uri = $_SERVER['REQUEST_URI'];
-            // Remove query string
+          
             $uri = strtok($uri, '?');
-            // Remove leading slash and trailing slash
+            
             $uri = trim($uri, '/');
             
             if (!empty($uri)) {

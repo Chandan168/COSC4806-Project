@@ -1,9 +1,7 @@
 <?php
-
 /* database connection stuff here
  * 
  */
-
 function db_connect() {
     try { 
         if (DB_TYPE === 'pgsql') {
