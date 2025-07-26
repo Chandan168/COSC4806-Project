@@ -146,4 +146,3 @@ class Movies extends Controller {
         echo json_encode($result);
         exit;
     }
-}
