@@ -19,3 +19,4 @@ define('DB_PORT', getenv('PGPORT'));
 define('DB_DATABASE', getenv('PGDATABASE'));
 define('DB_USER', getenv('PGUSER'));
 define('DB_PASS', getenv('PGPASSWORD'));
+define('GEMINI_API_KEY', getenv('GEMINI'));
